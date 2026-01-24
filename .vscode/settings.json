@@ -1,0 +1,6 @@
+{
+    "javascript.validate.enable": true,
+    "workbench.tips.enabled": true,
+    "editor.suggest.showIssues": false,
+    "reactSnippets.settings.prettierEnabled": true
+}

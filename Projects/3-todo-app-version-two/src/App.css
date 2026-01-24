@@ -1,0 +1,16 @@
+
+body{
+    background-color: #888383;
+    font-family: Arial, sans-serif;
+}
+input{
+    width: 100%;
+    background-color: #ccc3c3;
+}
+
+.kg-row{
+margin: 10px 5px;
+}
+.kg-button{
+    min-width: 90px;
+}

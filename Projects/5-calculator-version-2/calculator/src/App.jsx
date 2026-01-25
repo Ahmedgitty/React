@@ -7,7 +7,9 @@ function App() {
 
   const [calVal, setCalVal] = useState("");
   const onButtonClick = (buttonText) => {
-      
+      if (buttonText === 'C'){
+
+      }
   }
   return(
   <div className={styles.calculator}>

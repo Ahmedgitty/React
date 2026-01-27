@@ -4,7 +4,7 @@ import { useState } from "react";
 const FoodItems = ({ items }) => {
   let [activeItems, setActiveItems] = useState([]);
 
-  let onBuyButton = (item, event) => {
+  let onBuyButton = (item) => {
     let newItems = [...activeItems, item];
     setActiveItems(newItems);
   };
@@ -16,7 +16,7 @@ const FoodItems = ({ items }) => {
           key={item}
           foodItems={item}
           bought={activeItems.includes(item)}
-          handleBuyButtonClick={(event) => onBuyButton(item, event)}
+          handleBuyButtonClick={() => onBuyButton(item)}
         />
       ))}
       {/* this is the map method */}

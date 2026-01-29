@@ -1,3 +1,5 @@
+import { BiTrash } from "react-icons/bi";
+
 function TodoItem({todoName, todoDate, onDeleteClick}) {
   
   return (
@@ -7,7 +9,7 @@ function TodoItem({todoName, todoDate, onDeleteClick}) {
         <div className="col-4">{todoDate}</div>
         <div className="col-2">
           <button type="button" className="btn btn-danger kg-button" onClick={() => onDeleteClick(todoName)}>
-            Delete
+          <BiTrash />
           </button>
         </div>
       </div>

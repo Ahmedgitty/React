@@ -16,7 +16,6 @@ function App() {
   const[todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, ItemDueDate) => {
-    console.log(`New Item added: ${itemName} Date: ${ItemDueDate}`);
     const newTodoItems = [...todoItems, {name: itemName, dueDate: ItemDueDate}];
     setTodoItems(newTodoItems);
   };
@@ -33,7 +32,7 @@ function App() {
       {todoItems.length === 0 && <WelcomeMessage/>}
       <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem}/>
       
-    </center>
+    </center> 
   );
 }
 

@@ -1,11 +1,11 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import { BiMessageAdd } from "react-icons/bi";
+import { TodoItemsContext } from "../store/todo-item-store";
 
-function AddTodo({ onNewItem }) {
-  
+function AddTodo() {
+  const { addNewItem } = useContext(TodoItemsContext);
   const todoNameElement = useRef();
   const dueDateElement = useRef();
-
 
   const handleAddButtonClicked = (event) => {
     event.preventDefault();
@@ -13,8 +13,7 @@ function AddTodo({ onNewItem }) {
     const dueDate = dueDateElement.current.value;
     todoNameElement.current.value = "";
     dueDateElement.current.value = "";
-    onNewItem(todoName, dueDate);
-    
+    addNewItem(todoName, dueDate);
   };
 
   return (
@@ -28,16 +27,10 @@ function AddTodo({ onNewItem }) {
           ></input>
         </div>
         <div className="col-4">
-          <input
-            type="date"
-           ref={dueDateElement}
-          ></input>
+          <input type="date" ref={dueDateElement}></input>
         </div>
         <div className="col-2">
-          <button
-            type="submit"
-            className="btn btn-success kg-button"
-          >
+          <button type="submit" className="btn btn-success kg-button">
             <BiMessageAdd />
           </button>
         </div>

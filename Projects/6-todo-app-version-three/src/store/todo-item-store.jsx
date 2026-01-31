@@ -51,7 +51,7 @@ const TodoItemsContextProvider = ({ children }) => {
         todoItems: todoItems,
         addNewItem: addNewItem,
         deleteItem: deleteItem,
-      }}
+      }}  
     >
       {" "}
       {children}{" "}
